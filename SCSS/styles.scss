@@ -1,0 +1,498 @@
+$dark: #2b2b2b;
+$second: rgb(69, 65, 88);
+
+* {
+  margin: 0;
+  padding: 0;
+  font: 700 1rem "Poppins";
+  color: $dark;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95vw;
+  padding: 5px 50px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transition: 1s ease-in-out;
+
+  #header__logo {
+    a {
+      svg {
+        width: 80%;
+      }
+    }
+  }
+  #header__navbar {
+    a {
+      position: relative;
+      font: 200 1.5rem "Comfortaa";
+      padding: 0 5px;
+      letter-spacing: 0.5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: $dark;
+        left: 0;
+        bottom: 0;
+        transition: 0.3s;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #main__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55vw;
+    height: 80vh;
+    background-color: #454158;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    #main__writing {
+      #main__menu_icon {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        position: absolute;
+        top: 17.5%;
+        left: 23.5%;
+        justify-content: space-evenly;
+
+        &_red {
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          cursor: pointer;
+          background-color: red;
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+
+        &_yellow {
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          cursor: pointer;
+          background-color: yellow;
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+
+        &_green {
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          cursor: pointer;
+          background-color: green;
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+      }
+
+      #main__writing_effect {
+        path {
+          fill: transparent;
+          stroke-width: 1;
+          stroke: white;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: handwriting 20s linear forwards;
+          // animation-delay: 13s;
+        }
+        &:hover {
+          path {
+            animation: handwritingBackward 10s linear infinite;
+          }
+        }
+      }
+      .main__text {
+        color: white;
+        position: absolute;
+        font-weight: 200;
+
+        &_1 {
+          top: 22.5%;
+          left: 25%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 2px solid white;
+            background-color: $second;
+            animation: typing 1s steps(6) forwards;
+          }
+        }
+        &_2 {
+          top: 25%;
+          left: 27.5%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(6) forwards;
+            animation-delay: 1.5s;
+          }
+        }
+        &_3 {
+          top: 27.5%;
+          left: 30%;
+
+          span {
+            font-weight: 200;
+            color: red;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 5s steps(40) forwards;
+            animation-delay: 3s;
+          }
+        }
+        &_4 {
+          top: 30%;
+          left: 27.5%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(7) forwards;
+            animation-delay: 8s;
+          }
+        }
+        &_5 {
+          top: 35%;
+          left: 27.5%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(7) forwards;
+            animation-delay: 9s;
+          }
+        }
+        &_6 {
+          top: 37.5%;
+          left: 32.5%;
+          span {
+            color: yellow;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 3s steps(22) forwards;
+            animation-delay: 10s;
+          }
+        }
+        &_8 {
+          top: 60%;
+          left: 65%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(6) forwards;
+            animation-delay: 13s;
+          }
+        }
+        &_9 {
+          top: 65%;
+          left: 32.5%;
+          span {
+            font-size: 2rem;
+            color: green;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 4s steps(32) forwards;
+            animation-delay: 14s;
+          }
+        }
+        &_10 {
+          top: 70%;
+          left: 27.5%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(7) forwards;
+            animation-delay: 18s;
+          }
+        }
+        &_11 {
+          top: 75%;
+          left: 25%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 0px solid white;
+            background-color: $second;
+            animation: typing 1s steps(7) forwards;
+            animation-delay: 19s;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            // width: 1;
+            height: 100%;
+            background-color: transparent;
+            animation: blinkingCursor 1s steps(3) infinite;
+            animation-delay: 20s;
+          }
+        }
+      }
+    }
+  }
+}
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #about__container {
+    font-size: 5rem;
+  }
+}
+
+#work {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #work__container {
+    font-size: 5rem;
+  }
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #contact__container {
+    text-align: center;
+    font-size: 5rem;
+  }
+}
+
+#scrollTracker {
+  position: fixed;
+  top: 15%;
+  right: 50px;
+
+  &__line {
+    width: 5px;
+    height: 55vh;
+    background-color: $dark;
+  }
+
+  #scrollTracker__container {
+    position: absolute;
+    top: 10%;
+    height: 50vh;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .activeCircle {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+    div {
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background-color: $dark;
+      transition: 1s ease-in-out;
+
+      &:nth-child(2) {
+        transition: 0.5s ease-in-out;
+
+        &:hover::before {
+          content: "Main";
+          font-size: 2rem;
+          position: absolute;
+          right: 30px;
+          top: -15px;
+        }
+      }
+      &:nth-child(3) {
+        &:hover::before {
+          content: "About";
+          font-size: 2rem;
+          position: absolute;
+          right: 40px;
+          top: 150px;
+        }
+      }
+      &:nth-child(4) {
+        &:hover::before {
+          content: "Work";
+          font-size: 2rem;
+          position: absolute;
+          right: 40px;
+          top: 315px;
+        }
+      }
+      &:nth-child(5) {
+        &:hover::before {
+          content: "Contact";
+          font-size: 2rem;
+          position: absolute;
+          right: 40px;
+          top: 480px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes handwriting {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+@keyframes handwritingBackward {
+  0% {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+  }
+  100% {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  99% {
+    border-left: 2px solid white;
+  }
+  100% {
+    left: 100%;
+    border: 0px;
+    width: 0%;
+  }
+}
+
+@keyframes blinkingCursor {
+  0%,
+  75% {
+    border-left: 0px solid white;
+  }
+  76%,
+  100% {
+    border-left: 2px solid white;
+  }
+}

@@ -23,9 +23,4 @@ $(document).ready(() => {
     activeCircle.css("top", "660px");
     window.location.href = "#contact";
   });
-
-  // window.scroll(() => {
-  //   activeCircle.css("top", `${(i += window.scrollY)}px)`);
-  //   scrollY = window.scrollY;
-  // });
 });

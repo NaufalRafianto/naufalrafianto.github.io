@@ -22,6 +22,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 95vw;
+  height: 60px;
   padding: 5px 50px;
   background-color: white;
   z-index: 1000;
@@ -70,19 +71,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55vw;
-    height: 80vh;
+    width: 1200px;
+    height: 800px;
     background-color: #454158;
     border-radius: 10px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    animation: 1s ease-in-out;
     #main__writing {
       #main__menu_icon {
         width: 100px;
         height: 20px;
         display: flex;
-        position: absolute;
-        top: 17.5%;
-        left: 23.5%;
+        position: relative;
+        top: -575px;
+        left: -175px;
         justify-content: space-evenly;
 
         &_red {
@@ -121,6 +123,8 @@ a {
       }
 
       #main__writing_effect {
+        position: relative;
+        top: 50px;
         path {
           fill: transparent;
           stroke-width: 1;
@@ -128,11 +132,10 @@ a {
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
           animation: handwriting 20s linear forwards;
-          // animation-delay: 13s;
         }
         &:hover {
           path {
-            animation: handwritingBackward 10s linear infinite;
+            animation: handwritingBackward 20s linear infinite;
           }
         }
       }
@@ -142,7 +145,7 @@ a {
         font-weight: 200;
 
         &_1 {
-          top: 22.5%;
+          top: 25%;
           left: 25%;
 
           &::before {
@@ -158,7 +161,7 @@ a {
           }
         }
         &_2 {
-          top: 25%;
+          top: 27.5%;
           left: 27.5%;
           &::before {
             content: "";
@@ -174,7 +177,7 @@ a {
           }
         }
         &_3 {
-          top: 27.5%;
+          top: 30%;
           left: 30%;
 
           span {
@@ -195,7 +198,7 @@ a {
           }
         }
         &_4 {
-          top: 30%;
+          top: 32.5%;
           left: 27.5%;
           &::before {
             content: "";
@@ -211,7 +214,7 @@ a {
           }
         }
         &_5 {
-          top: 35%;
+          top: 37.5%;
           left: 27.5%;
           &::before {
             content: "";
@@ -227,9 +230,10 @@ a {
           }
         }
         &_6 {
-          top: 37.5%;
-          left: 32.5%;
+          top: 42.5%;
+          left: 30%;
           span {
+            font-size: 2rem;
             color: yellow;
           }
           &::before {
@@ -246,7 +250,7 @@ a {
           }
         }
         &_8 {
-          top: 60%;
+          top: 72.5%;
           left: 65%;
           &::before {
             content: "";
@@ -262,10 +266,10 @@ a {
           }
         }
         &_9 {
-          top: 65%;
+          top: 75%;
           left: 32.5%;
           span {
-            font-size: 2rem;
+            font-size: 3rem;
             color: green;
           }
           &::before {
@@ -282,7 +286,7 @@ a {
           }
         }
         &_10 {
-          top: 70%;
+          top: 82.5%;
           left: 27.5%;
 
           &::before {
@@ -299,7 +303,7 @@ a {
           }
         }
         &_11 {
-          top: 75%;
+          top: 87.5%;
           left: 25%;
           &::before {
             content: "";
@@ -319,7 +323,6 @@ a {
             position: absolute;
             top: 0;
             right: 0;
-            // width: 1;
             height: 100%;
             background-color: transparent;
             animation: blinkingCursor 1s steps(3) infinite;
@@ -392,7 +395,7 @@ a {
     .activeCircle {
       position: absolute;
       top: 0;
-      right: -10px;
+      right: -12.5px;
       width: 50px;
       height: 50px;
       border-radius: 100%;

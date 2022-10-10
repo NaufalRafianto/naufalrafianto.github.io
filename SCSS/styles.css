@@ -19,6 +19,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 95vw;
+  height: 60px;
   padding: 5px 50px;
   background-color: white;
   z-index: 1000;
@@ -59,19 +60,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55vw;
-  height: 80vh;
+  width: 1200px;
+  height: 800px;
   background-color: #454158;
   border-radius: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: 1s ease-in-out;
+          animation: 1s ease-in-out;
 }
 #main #main__container #main__writing #main__menu_icon {
   width: 100px;
   height: 20px;
   display: flex;
-  position: absolute;
-  top: 17.5%;
-  left: 23.5%;
+  position: relative;
+  top: -575px;
+  left: -175px;
   justify-content: space-evenly;
 }
 #main #main__container #main__writing #main__menu_icon_red {
@@ -104,6 +107,10 @@ a {
 #main #main__container #main__writing #main__menu_icon_green:hover {
   opacity: 0.75;
 }
+#main #main__container #main__writing #main__writing_effect {
+  position: relative;
+  top: 50px;
+}
 #main #main__container #main__writing #main__writing_effect path {
   fill: transparent;
   stroke-width: 1;
@@ -114,8 +121,8 @@ a {
           animation: handwriting 20s linear forwards;
 }
 #main #main__container #main__writing #main__writing_effect:hover path {
-  -webkit-animation: handwritingBackward 10s linear infinite;
-          animation: handwritingBackward 10s linear infinite;
+  -webkit-animation: handwritingBackward 20s linear infinite;
+          animation: handwritingBackward 20s linear infinite;
 }
 #main #main__container #main__writing .main__text {
   color: white;
@@ -123,7 +130,7 @@ a {
   font-weight: 200;
 }
 #main #main__container #main__writing .main__text_1 {
-  top: 22.5%;
+  top: 25%;
   left: 25%;
 }
 #main #main__container #main__writing .main__text_1::before {
@@ -139,7 +146,7 @@ a {
           animation: typing 1s steps(6) forwards;
 }
 #main #main__container #main__writing .main__text_2 {
-  top: 25%;
+  top: 27.5%;
   left: 27.5%;
 }
 #main #main__container #main__writing .main__text_2::before {
@@ -157,7 +164,7 @@ a {
           animation-delay: 1.5s;
 }
 #main #main__container #main__writing .main__text_3 {
-  top: 27.5%;
+  top: 30%;
   left: 30%;
 }
 #main #main__container #main__writing .main__text_3 span {
@@ -179,7 +186,7 @@ a {
           animation-delay: 3s;
 }
 #main #main__container #main__writing .main__text_4 {
-  top: 30%;
+  top: 32.5%;
   left: 27.5%;
 }
 #main #main__container #main__writing .main__text_4::before {
@@ -197,7 +204,7 @@ a {
           animation-delay: 8s;
 }
 #main #main__container #main__writing .main__text_5 {
-  top: 35%;
+  top: 37.5%;
   left: 27.5%;
 }
 #main #main__container #main__writing .main__text_5::before {
@@ -215,10 +222,11 @@ a {
           animation-delay: 9s;
 }
 #main #main__container #main__writing .main__text_6 {
-  top: 37.5%;
-  left: 32.5%;
+  top: 42.5%;
+  left: 30%;
 }
 #main #main__container #main__writing .main__text_6 span {
+  font-size: 2rem;
   color: yellow;
 }
 #main #main__container #main__writing .main__text_6::before {
@@ -236,7 +244,7 @@ a {
           animation-delay: 10s;
 }
 #main #main__container #main__writing .main__text_8 {
-  top: 60%;
+  top: 72.5%;
   left: 65%;
 }
 #main #main__container #main__writing .main__text_8::before {
@@ -254,11 +262,11 @@ a {
           animation-delay: 13s;
 }
 #main #main__container #main__writing .main__text_9 {
-  top: 65%;
+  top: 75%;
   left: 32.5%;
 }
 #main #main__container #main__writing .main__text_9 span {
-  font-size: 2rem;
+  font-size: 3rem;
   color: green;
 }
 #main #main__container #main__writing .main__text_9::before {
@@ -276,7 +284,7 @@ a {
           animation-delay: 14s;
 }
 #main #main__container #main__writing .main__text_10 {
-  top: 70%;
+  top: 82.5%;
   left: 27.5%;
 }
 #main #main__container #main__writing .main__text_10::before {
@@ -294,7 +302,7 @@ a {
           animation-delay: 18s;
 }
 #main #main__container #main__writing .main__text_11 {
-  top: 75%;
+  top: 87.5%;
   left: 25%;
 }
 #main #main__container #main__writing .main__text_11::before {
@@ -380,7 +388,7 @@ a {
 #scrollTracker #scrollTracker__container .activeCircle {
   position: absolute;
   top: 0;
-  right: -10px;
+  right: -12.5px;
   width: 50px;
   height: 50px;
   border-radius: 100%;

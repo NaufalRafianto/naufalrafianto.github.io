@@ -11,28 +11,21 @@ $(document).ready(() => {
     window.location.href = "#main";
   });
   scrollTracker2.click(() => {
-    activeCircle.css("top", "150px");
+    activeCircle.css("top", "210px");
     window.location.href = "#about";
   });
   scrollTracker3.click(() => {
-    activeCircle.css("top", "310px");
+    activeCircle.css("top", "435px");
     window.location.href = "#work";
   });
   scrollTracker4.click(() => {
     console.log("click");
-    activeCircle.css("top", "475px");
+    activeCircle.css("top", "660px");
     window.location.href = "#contact";
   });
 
-  window.scroll(() => {
-    activeCircle.css("top", `100px`);
-    scrollY = window.scrollY;
-    console.log(window.scrollY);
-  });
+  // window.scroll(() => {
+  //   activeCircle.css("top", `${(i += window.scrollY)}px)`);
+  //   scrollY = window.scrollY;
+  // });
 });
-
-// const circle = (clickedCircle, circleActive) =>{
-// clickedCircle.click(() =>{
-//   ci
-// })
-// };
